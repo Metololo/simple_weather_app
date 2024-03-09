@@ -1,8 +1,12 @@
-# React + Vite
+# SIMPLE WEATHER APP IN REACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+this project is a simple react app for training purpose
 
-Currently, two official plugins are available:
+You can simply search for a city and get the weather of this country.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It uses 2 apis :
+
+- an api that provides weather info : ...
+- an api that provides background images related to the weather : ...
+
+The main goal of this project is to use the 2 hooks "useState" and "useEffect"
