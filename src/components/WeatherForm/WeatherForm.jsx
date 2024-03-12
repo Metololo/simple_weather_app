@@ -7,6 +7,7 @@ function WeatherForm({ searchInput, handleSearchInput }) {
         <input
           id="city--input"
           placeholder="Enter a city name..."
+          className="input--open"
           name="city"
           value={searchInput}
           onChange={handleSearchInput}
@@ -16,12 +17,12 @@ function WeatherForm({ searchInput, handleSearchInput }) {
             <li>Paris, France</li>
             <li>Paris, France</li>
             <li>Paris, France</li>
+            <li>Paris, France</li>
           </ul>
         </div>
       </div>
     </form>
   );
 }
-
 
 export default WeatherForm;
