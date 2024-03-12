@@ -1,0 +1,34 @@
+input {
+  display: block;
+}
+
+#city--form {
+  width: 80%;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+#city--form input {
+  margin-top: 8px;
+  width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  padding: 8px;
+}
+
+#city--form input:focus {
+  outline: none;
+}
+
+#search--result {
+  width: 100%;
+  background-color: red;
+  color: white;
+}
