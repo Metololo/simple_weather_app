@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 function Weather() {
   const [searchInput, setSearchInput] = useState("");
+  const [citiesFound, setCitiesFound] = useState([]);
 
   useEffect(() => {
     if (searchInput === "") {
@@ -16,8 +17,15 @@ function Weather() {
       const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(url);
       console.log(proxyUrl);
       const response = await fetch(proxyUrl, { signal });
-      const json = await response.json();
-      console.log(json);
+      const citiesResult = await response.json();
+
+      setCitiesFound(() => {
+        return citiesResult.predictions.map(city => {
+          return city.description
+        })
+      })
+    
+      
     }
 
     const controller = new AbortController();
@@ -25,7 +33,6 @@ function Weather() {
     getData(signal);
 
     return () => {
-      console.log("aborted")
       controller.abort();
     };
   }, [searchInput]);
@@ -40,6 +47,7 @@ function Weather() {
       <WeatherForm
         searchInput={searchInput}
         handleSearchInput={handleSearchInput}
+        citiesFound={citiesFound}
       />
     </section>
   );
